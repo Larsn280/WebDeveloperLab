@@ -61,7 +61,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-  options.AddPolicy("LNSchoolCors",
+
+  options.AddPolicy("lnschool-react",
     policy =>
     {
       policy.AllowAnyHeader();
