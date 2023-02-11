@@ -19,39 +19,81 @@ namespace LNSchool_API.Repositories
            _context = context;
         }
 
-        public Task AddCourseAsync(PostCourseViewModel model)
+        public async Task AddCourseAsync(PostCourseViewModel model)
         {
-            throw new NotImplementedException();
+            try {
+                var courseToAdd = _mapper.Map<Course>(model);
+
+                await _context.Courses.AddAsync(courseToAdd);
+            } catch {
+                throw new Exception($"We could not add: {model}");
+            }
         }
 
-        public Task DeleteCourseAsync(int id)
+        public async Task DeleteCourseAsync(int id)
         {
-            throw new NotImplementedException();
+            try {
+                var response = await _context.Courses.FindAsync(id);
+
+                if (response is null)
+                {
+                    throw new Exception($"We could not find a course with id: {id}");
+                }
+
+                if (response is not null)
+                {
+                    _context.Courses.Remove(response);
+                }
+            } catch {
+                throw new Exception($"We could not delete course with id: {id}");
+            }
         }
 
-        public Task EditCourseAsync(int courseId, PostCourseViewModel model)
+        public async Task EditCourseAsync(int courseId, PostCourseViewModel model)
         {
-            throw new NotImplementedException();
+            try {
+                var course = await _context.Courses.FindAsync(courseId);
+
+                if (course is null)
+                {
+                    throw new Exception($"We could not find any course with id: {courseId}");
+                }
+
+                course.CourseNr = model.CourseNr;
+                course.CourseTitle = model.CourseTitle;
+                course.CourseLength = model.CourseLength;
+                course.Category = model.Category;
+                course.Description = model.Description;
+                course.Details = model.Details;
+
+                _context.Courses.Update(course);
+            } catch {
+                throw new Exception($"We could not edit course with id: {courseId}");
+            }
         }
 
-        public Task<CourseViewModel?> GetCourseAsync(string courseNr)
+        public async Task<CourseViewModel?> GetCourseAsync(string courseNr)
         {
-            throw new NotImplementedException();
+            return await _context.Courses.Where(c => c.CourseNr == Convert.ToInt32(courseNr))
+            .ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider)
+            .SingleOrDefaultAsync();
         }
 
-        public Task<CourseViewModel?> GetCourseByIdAsync(int id)
+        public async Task<CourseViewModel?> GetCourseByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Courses.Where(c => c.Id == id)
+            .ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider)
+            .SingleOrDefaultAsync();
         }
 
-        public Task<List<CourseViewModel>> ListAllCoursesAsync()
+        public async Task<List<CourseViewModel>> ListAllCoursesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Courses.ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider).ToListAsync();
         }
 
-        public Task<bool> SaveAllAsync()
+        public async Task<bool> SaveAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }
