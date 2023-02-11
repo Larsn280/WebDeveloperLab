@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dmFAf6rVMKn2yjJLyzP1XRZTHwPtt+oHka6aNfVSxe8ll2uV4YKtuEyy/pP5gGPSvXVQ19Dj9j3ZC7bzWEo3Qw==",
+  "dgSpecHash": "X1Eqz8e4fJsSbBFTgIDw8+8m6RIRnpwCk6AEwQ59NPsuMqZs9fv98ykNrvFCfKN50vF/kkhQaTkDwpHVssS8Ug==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj",
+  "projectFilePath": "C:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lars\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Lars\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
