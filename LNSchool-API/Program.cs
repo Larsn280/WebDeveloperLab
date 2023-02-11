@@ -84,6 +84,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("lnschool-react");
+
 app.UseAuthorization();
 
 app.MapControllers();
