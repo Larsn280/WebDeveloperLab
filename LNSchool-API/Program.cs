@@ -24,6 +24,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
       options.Password.RequireUppercase = false;
       options.Password.RequiredLength = 3;
       options.Password.RequireNonAlphanumeric = false;
+      options.Password.RequireDigit = false;
 
       options.User.RequireUniqueEmail = true;
 

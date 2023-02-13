@@ -47,8 +47,11 @@ function Login() {
       const result = await response.json();
       localStorage.setItem("token", JSON.stringify(result.token));
       console.log(JSON.stringify(result));
+
       const accessToken = result.token;
-      setAuth({ userName, password, accessToken });
+      const userType = result.userType;
+
+      setAuth({ userName, password, userType, accessToken });
       setUserName("");
       setPassword("");
       navigate(from, { replace: true });

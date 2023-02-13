@@ -17,7 +17,7 @@ namespace LNSchool_API.Data
             foreach (var user in users)
             {
                 var password = user.UserName.Split("@");
-                var result = await userManager.CreateAsync(user, "0"+password[0]);
+                var result = await userManager.CreateAsync(user, password[0]);
 
                 if (!result.Succeeded)
                 {

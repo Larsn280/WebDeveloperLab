@@ -17,12 +17,21 @@ function Navbar() {
         <span className="text-primary">LNSchool</span>
       </h1>
       <ul>
-        {auth?.userName ? (
+        {auth?.userType === "IsAdmin" ? (
           <li>
             <NavLink to="/">Start sida</NavLink>
             <NavLink to="/list">Aktuella Kurser</NavLink>
             <NavLink onClick={logOut} to="/login">
-              Logga ut
+              Logga ut som Admin
+            </NavLink>
+            <NavLink to="addCourse">Lägg till kurs</NavLink>
+          </li>
+        ) : auth?.userType === "IsHeadmaster" ? (
+          <li>
+            <NavLink to="/">Start sida</NavLink>
+            <NavLink to="/list">Aktuella Kurser</NavLink>
+            <NavLink onClick={logOut} to="/login">
+              Logga ut som Rektor
             </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
           </li>
