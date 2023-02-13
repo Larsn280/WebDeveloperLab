@@ -2,6 +2,7 @@ using System.Text;
 using LNSchool_API.Data;
 using LNSchool_API.Helpers;
 using LNSchool_API.Interfaces;
+using LNSchool_API.Models;
 using LNSchool_API.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -16,7 +17,7 @@ builder.Services.AddDbContext<LNSchoolContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"))
 );
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
   options =>
     {
       options.Password.RequireLowercase = false;

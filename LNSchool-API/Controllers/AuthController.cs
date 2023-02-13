@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using LNSchool_API.Models;
 using LNSchool_API.ViewModels.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -14,11 +15,11 @@ namespace LNSchool_API.Controllers
   public class AuthController : ControllerBase
   {
     private readonly RoleManager<IdentityRole> _roleManager;
-    private readonly UserManager<IdentityUser> _userManager;
-    private readonly SignInManager<IdentityUser> _signManager;
+    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly SignInManager<ApplicationUser> _signManager;
     private readonly IConfiguration _config;
 
-    public AuthController(IConfiguration config, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
+    public AuthController(IConfiguration config, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager)
     {
       _roleManager = roleManager;
       _userManager = userManager;
@@ -29,7 +30,7 @@ namespace LNSchool_API.Controllers
     [HttpPost("register")]
     public async Task<ActionResult<UserViewModel>> RegisterUser(RegisterViewModel model)
     {
-      var user = new IdentityUser
+      var user = new ApplicationUser
       {
         Email = model.Email!.ToLower(),
         UserName = model.Email.ToLower()
@@ -96,7 +97,7 @@ namespace LNSchool_API.Controllers
       return Ok(userData);
     }
 
-    private async Task<string> CreateJwtToken(IdentityUser user)
+    private async Task<string> CreateJwtToken(ApplicationUser user)
     {
       var key = Encoding.ASCII.GetBytes(_config.GetValue<string>("apiKey"));
       var userClaims = (await _userManager.GetClaimsAsync(user)).ToList();
