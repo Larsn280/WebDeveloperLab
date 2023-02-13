@@ -22,7 +22,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
     {
       options.Password.RequireLowercase = false;
       options.Password.RequireUppercase = false;
-      options.Password.RequiredLength = 4;
+      options.Password.RequiredLength = 3;
       options.Password.RequireNonAlphanumeric = false;
 
       options.User.RequireUniqueEmail = true;
@@ -96,8 +96,10 @@ var services = scope.ServiceProvider;
 try
 {
   var context = services.GetRequiredService<LNSchoolContext>();
+  var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
   await context.Database.MigrateAsync();
   await LoadData.LoadCourses(context);
+  await LoadData.LoadUsers(context, userManager);
 }
 catch (Exception ex)
 {

@@ -33,23 +33,23 @@ namespace LNSchool_API.Controllers
       var user = new ApplicationUser
       {
         Email = model.Email!.ToLower(),
-        UserName = model.Email.ToLower()
+        UserName = model.Email.ToLower(), 
       };
 
       var result = await _userManager.CreateAsync(user, model.Password);
 
       if (result.Succeeded)
       {
-        if (model.IsAdmin)
-        {
-          await _userManager.AddClaimAsync(user, new Claim("Admin", "true"));
-        }
-        if (model.IsHeadmaster) {
-          await _userManager.AddClaimAsync(user, new Claim("Headmaster", "true"));
-        }
-        if (model.IsTeacher) {
-          await _userManager.AddClaimAsync(user, new Claim("Teacher", "true"));
-        }
+        // if (model.IsAdmin)
+        // {
+        //   await _userManager.AddClaimAsync(user, new Claim("Admin", "true"));
+        // }
+        // if (model.IsHeadmaster) {
+        //   await _userManager.AddClaimAsync(user, new Claim("Headmaster", "true"));
+        // }
+        // if (model.IsTeacher) {
+        //   await _userManager.AddClaimAsync(user, new Claim("Teacher", "true"));
+        // }
 
         await _userManager.AddClaimAsync(user, new Claim("User", "true"));
         await _userManager.AddClaimAsync(user, new Claim(ClaimTypes.Name, user.UserName));

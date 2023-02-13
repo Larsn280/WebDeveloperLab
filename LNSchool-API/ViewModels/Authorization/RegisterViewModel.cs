@@ -9,8 +9,8 @@ namespace LNSchool_API.ViewModels.Authorization
         public string? Email { get; set; }
         [Required]
         public string? Password { get; set; }
-        public bool IsAdmin { get; set; } = false;
-        public bool IsHeadmaster { get; set; } = false;
-        public bool IsTeacher { get; set; } = false;
+        // public bool IsAdmin { get; set; } = false;
+        // public bool IsHeadmaster { get; set; } = false;
+        // public bool IsTeacher { get; set; } = false;
     }
 }

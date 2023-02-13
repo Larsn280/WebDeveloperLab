@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj": {}
+    "C:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj": {
+    "C:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj",
+        "projectUniqueName": "C:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj",
         "projectName": "LNSchool-API",
-        "projectPath": "c:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj",
+        "projectPath": "C:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\LNSchool-API.csproj",
         "packagesPath": "C:\\Users\\Lars\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\obj\\",
+        "outputPath": "C:\\Users\\Lars\\Kurs Webbutveckling\\WebDeveloperLab\\LNSchool-API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lars\\AppData\\Roaming\\NuGet\\NuGet.Config",
