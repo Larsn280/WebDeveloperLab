@@ -22,7 +22,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
     {
       options.Password.RequireLowercase = false;
       options.Password.RequireUppercase = false;
-      options.Password.RequiredLength = 3;
+      options.Password.RequiredLength = 1;
       options.Password.RequireNonAlphanumeric = false;
       options.Password.RequireDigit = false;
 

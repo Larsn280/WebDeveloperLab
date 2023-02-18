@@ -35,6 +35,24 @@ function Navbar() {
             </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
           </li>
+        ) : auth?.userType === "IsTeacher" ? (
+          <li>
+            <NavLink to="/">Start sida</NavLink>
+            <NavLink to="/list">Aktuella Kurser</NavLink>
+            <NavLink onClick={logOut} to="/login">
+              Logga ut som Lärare
+            </NavLink>
+            <NavLink to="addCourse">Lägg till kurs</NavLink>
+          </li>
+        ) : auth?.userType === "IsStudent" ? (
+          <li>
+            <NavLink to="/">Start sida</NavLink>
+            <NavLink to="/list">Aktuella Kurser</NavLink>
+            <NavLink onClick={logOut} to="/login">
+              Logga ut som Student
+            </NavLink>
+            <NavLink to="addCourse">Lägg till kurs</NavLink>
+          </li>
         ) : (
           <li>
             <>

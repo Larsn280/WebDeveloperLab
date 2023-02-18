@@ -14,10 +14,23 @@ namespace LNSchool_API.Data
             var userData = await File.ReadAllTextAsync("Data/SeedData/users.json");
             var users = JsonSerializer.Deserialize<List<ApplicationUser>>(userData);
 
+            var studentData = await File.ReadAllTextAsync("Data/SeedData/students.json");
+            var students = JsonSerializer.Deserialize<List<ApplicationUser>>(studentData);
+
             foreach (var user in users)
             {
                 var password = user.UserName.Split("@");
                 var result = await userManager.CreateAsync(user, password[0]);
+
+                if (!result.Succeeded)
+                {
+                    throw new Exception("Failed to seed user data");
+                }
+            }
+
+            foreach (var student in students)
+            {
+                var result = await userManager.CreateAsync(student, "1");
 
                 if (!result.Succeeded)
                 {

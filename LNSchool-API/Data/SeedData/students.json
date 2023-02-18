@@ -1,0 +1,98 @@
+[
+    {
+        "Email": "Bart.Simpson@email.com",
+        "UserName": "Bart.Simpson@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Lisa.Simpson@email.com",
+        "UserName": "Lisa.Simpson@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Nelson.Muntz@email.com",
+        "UserName": "Nelson.Muntz@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Martin.Prince.Jr.@email.com",
+        "UserName": "Martin.Prince.Jr.@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Ralph.Wiggum@email.com",
+        "UserName": "Ralph.Wiggum@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Jessica.Lovejoy@email.com",
+        "UserName": "Jessica.Lovejoy@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Peter.Griffin@email.com",
+        "UserName": "Peter.Griffin@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Lois.Griffin@email.com",
+        "UserName": "Lois.Griffin@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Meg.Griffin@email.com",
+        "UserName": "Meg.Griffin@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Chris.Griffin@email.com",
+        "UserName": "Chris.Griffin@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Stewie.Griffin@email.com",
+        "UserName": "Stewie.Griffin@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    },
+    {
+        "Email": "Brian.Griffin@email.com",
+        "UserName": "Brian.Griffin@email.com",
+        "UserType": "IsStudent",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
+    }
+]
