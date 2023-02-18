@@ -17,20 +17,17 @@ namespace LNSchool_API.Data
             var studentData = await File.ReadAllTextAsync("Data/SeedData/students.json");
             var students = JsonSerializer.Deserialize<List<ApplicationUser>>(studentData);
 
-            foreach (var user in users)
-            {
-                var password = user.UserName.Split("@");
-                var result = await userManager.CreateAsync(user, password[0]);
+            var employeeData = await File.ReadAllTextAsync("Data/SeedData/employees.json");
+            var employees = JsonSerializer.Deserialize<List<ApplicationUser>>(employeeData);
 
-                if (!result.Succeeded)
-                {
-                    throw new Exception("Failed to seed user data");
-                }
-            }
+            List<ApplicationUser> seedUsers = new List<ApplicationUser>();
+            seedUsers.AddRange(users!);
+            seedUsers.AddRange(students!);
+            seedUsers.AddRange(employees!);
 
-            foreach (var student in students)
+            foreach (var seedUser in seedUsers)
             {
-                var result = await userManager.CreateAsync(student, "1");
+                var result = await userManager.CreateAsync(seedUser, "1");
 
                 if (!result.Succeeded)
                 {

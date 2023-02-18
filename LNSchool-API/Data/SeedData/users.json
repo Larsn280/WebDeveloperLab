@@ -3,30 +3,40 @@
         "Email": "admin@hotmail.com",
         "UserName": "admin@hotmail.com",
         "UserType": "IsAdmin",
-        "EmailConfirmed": true
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
     },
     {
         "Email": "headmaster@hotmail.com",
         "UserName": "headmaster@hotmail.com",
         "UserType": "IsHeadmaster",
-        "EmailConfirmed": true
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
     },
     {
         "Email": "teacher@hotmail.com",
         "UserName": "teacher@hotmail.com",
         "UserType": "IsTeacher",
-        "EmailConfirmed": true
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
     },
     {
         "Email": "student@hotmail.com",
         "UserName": "student@hotmail.com",
         "UserType": "IsStudent",
-        "EmailConfirmed": true
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
     },
     {
         "Email": "user@hotmail.com",
         "UserName": "user@hotmail.com",
         "UserType": "IsUser",
-        "EmailConfirmed": true
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
     }
 ]

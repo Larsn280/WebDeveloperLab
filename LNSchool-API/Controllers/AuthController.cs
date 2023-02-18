@@ -36,7 +36,7 @@ namespace LNSchool_API.Controllers
         UserName = model.Email.ToLower(), 
       };
 
-      var result = await _userManager.CreateAsync(user, model.Password);
+      var result = await _userManager.CreateAsync(user, model.Password!);
 
       if (result.Succeeded)
       {
@@ -77,12 +77,12 @@ namespace LNSchool_API.Controllers
     [AllowAnonymous]
     public async Task<ActionResult<UserViewModel>> Login(LoginViewModel model)
     {
-      var user = await _userManager.FindByNameAsync(model.UserName);
+      var user = await _userManager.FindByNameAsync(model.UserName!);
 
       if (user is null)
         return Unauthorized("Felaktigt användarnamn");
 
-      var result = await _signManager.CheckPasswordSignInAsync(user, model.Password, false);
+      var result = await _signManager.CheckPasswordSignInAsync(user, model.Password!, false);
 
       if (!result.Succeeded)
         return Unauthorized();
@@ -100,7 +100,7 @@ namespace LNSchool_API.Controllers
 
     private async Task<string> CreateJwtToken(ApplicationUser user)
     {
-      var key = Encoding.ASCII.GetBytes(_config.GetValue<string>("apiKey"));
+      var key = Encoding.ASCII.GetBytes(_config.GetValue<string>("apiKey")!);
       var userClaims = (await _userManager.GetClaimsAsync(user)).ToList();
 
       var jwt = new JwtSecurityToken(

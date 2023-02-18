@@ -1,56 +1,51 @@
 [
     {
-       "TeacherNr": 3000,
-       "FirstName": "Barney",
-       "LastName": "Gumble",
-       "Email": "First.Last@email.com",
-       "PhoneNr": "0X0XXXX777",
-       "Adress": "6X6XXX Springfield",
-       "AreasOfExpertise": "C Sharp, HTML, CSS"
+        "Email": "Barney.Gumble@email.com",
+        "UserName": "Barney.Gumble@email.com",
+        "UserType": "IsHeadmaster",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
     },
     {
-        "TeacherNr": 3001,
-        "FirstName": "Homer",
-        "LastName": "Simpson",
-        "Email": "First.Last@email.com",
-        "PhoneNr": "0X0XXXX777",
-        "Adress": "6X6XXX Springfield",
-        "AreasOfExpertise": "NET"
+        "Email": "Homer.Simpson@email.com",
+        "UserName": "Homer.Simpson@email.com",
+        "UserType": "IsTeacher",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
      },
      {
-        "TeacherNr": 3002,
-        "FirstName": "Marge",
-        "LastName": "Simpson",
-        "Email": "First.Last@email.com",
-        "PhoneNr": "0X0XXXX777",
-        "Adress": "6X6XXX Springfield",
-        "AreasOfExpertise": "C Sharp, NET"
+        "Email": "Marge.Simpson@email.com",
+        "UserName": "Marge.Simpson@email.com",
+        "UserType": "IsTeacher",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
      },
      {
-        "TeacherNr": 3003,
-        "FirstName": "Apu",
-        "LastName": " Nahasapeemapetilon",
-        "Email": "First.Last@email.com",
-        "PhoneNr": "0X0XXXX777",
-        "Adress": "6X6XXX Springfield",
-        "AreasOfExpertise": "PHP, Python"
+
+        "Email": "Apu.Nahasapeemapetilon@email.com",
+        "UserName": "Apu.Nahasapeemapetilon@email.com",
+        "UserType": "IsTeacher",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
      },
      {
-        "TeacherNr": 3004,
-        "FirstName": "Chief Clancy",
-        "LastName": "Wiggum",
-        "Email": "First.Last@email.com",
-        "PhoneNr": "0X0XXXX777",
-        "Adress": "6X6XXX Springfield",
-        "AreasOfExpertise": "C Sharp, SqlServer"
+        "Email": "Chief.Clancy.Wiggum@email.com",
+        "UserName": "Chief.Clancy.Wiggum@email.com",
+        "UserType": "IsTeacher",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
      },
      {
-        "TeacherNr": 3005,
-        "FirstName": "Edna",
-        "LastName": "Krabappel",
-        "Email": "First.Last@email.com",
-        "PhoneNr": "0X0XXXX777",
-        "Adress": "6X6XXX Springfield",
-        "AreasOfExpertise": "JavaScript, React"
+        "Email": "Edna.Krabappel@email.com",
+        "UserName": "Edna.Krabappel@email.com",
+        "UserType": "IsTeacher",
+        "EmailConfirmed": true,
+        "PhoneNumber": "0X0XXXX999",
+        "PhoneNumberConfirmed": true
      }
 ]
