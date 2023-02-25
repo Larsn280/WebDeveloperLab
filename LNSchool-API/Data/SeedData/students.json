@@ -2,6 +2,9 @@
     {
         "Email": "Bart.Simpson@email.com",
         "UserName": "Bart.Simpson@email.com",
+        "FirstName": "Bart",
+        "LastName": "Simpson",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -10,6 +13,9 @@
     {
         "Email": "Lisa.Simpson@email.com",
         "UserName": "Lisa.Simpson@email.com",
+        "FirstName": "Lisa",
+        "LastName": "Simpson",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -18,6 +24,9 @@
     {
         "Email": "Nelson.Muntz@email.com",
         "UserName": "Nelson.Muntz@email.com",
+        "FirstName": "Nelson",
+        "LastName": "Muntz",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -26,6 +35,9 @@
     {
         "Email": "Martin.Prince.Jr.@email.com",
         "UserName": "Martin.Prince.Jr.@email.com",
+        "FirstName": "Martin",
+        "LastName": "Prince Jr",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -34,6 +46,9 @@
     {
         "Email": "Ralph.Wiggum@email.com",
         "UserName": "Ralph.Wiggum@email.com",
+        "FirstName": "Ralph",
+        "LastName": "Wiggum",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -42,6 +57,9 @@
     {
         "Email": "Jessica.Lovejoy@email.com",
         "UserName": "Jessica.Lovejoy@email.com",
+        "FirstName": "Jessica",
+        "LastName": "Lovejoy",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -50,6 +68,9 @@
     {
         "Email": "Peter.Griffin@email.com",
         "UserName": "Peter.Griffin@email.com",
+        "FirstName": "Peter",
+        "LastName": "Griffin",
+        "Address": "31 Spooner Street",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -58,6 +79,9 @@
     {
         "Email": "Lois.Griffin@email.com",
         "UserName": "Lois.Griffin@email.com",
+        "FirstName": "Lois",
+        "LastName": "Griffin",
+        "Address": "31 Spooner Street",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -66,6 +90,9 @@
     {
         "Email": "Meg.Griffin@email.com",
         "UserName": "Meg.Griffin@email.com",
+        "FirstName": "Meg",
+        "LastName": "Griffin",
+        "Address": "31 Spooner Street",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -74,6 +101,9 @@
     {
         "Email": "Chris.Griffin@email.com",
         "UserName": "Chris.Griffin@email.com",
+        "FirstName": "Chris",
+        "LastName": "Griffin",
+        "Address": "31 Spooner Street",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -82,6 +112,9 @@
     {
         "Email": "Stewie.Griffin@email.com",
         "UserName": "Stewie.Griffin@email.com",
+        "FirstName": "Stewie",
+        "LastName": "Griffin",
+        "Address": "31 Spooner Street",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -90,6 +123,9 @@
     {
         "Email": "Brian.Griffin@email.com",
         "UserName": "Brian.Griffin@email.com",
+        "FirstName": "Brian",
+        "LastName": "Griffin",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",

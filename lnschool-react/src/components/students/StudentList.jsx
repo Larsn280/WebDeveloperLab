@@ -64,7 +64,12 @@ function StudentList() {
         <thead>
           <tr>
             <th></th>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
             <th>Användarnamn</th>
+            <th>Adress</th>
+            <th>Telefon</th>
+            <th>Email</th>
             <th></th>
           </tr>
         </thead>

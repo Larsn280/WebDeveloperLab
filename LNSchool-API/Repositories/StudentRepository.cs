@@ -26,7 +26,12 @@ namespace LNSchool_API.Repositories
 
                     student = new StudentViewModel
                     {
-                        UserName = studeing.UserName
+                        FirstName = studeing.FirstName,
+                        LastName = studeing.LastName,
+                        UserName = studeing.UserName,
+                        Address = studeing.Address,
+                        PhoneNumber = studeing.PhoneNumber,
+                        Email = studeing.Email
                     };
 
                     allStudents.Add(student);

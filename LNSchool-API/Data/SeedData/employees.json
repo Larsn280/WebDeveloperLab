@@ -2,6 +2,9 @@
     {
         "Email": "Barney.Gumble@email.com",
         "UserName": "Barney.Gumble@email.com",
+        "FirstName": "Barney",
+        "LastName": "Gumble",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsHeadmaster",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -10,6 +13,9 @@
     {
         "Email": "Homer.Simpson@email.com",
         "UserName": "Homer.Simpson@email.com",
+        "FirstName": "Homer",
+        "LastName": "Simpson",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsTeacher",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -18,6 +24,9 @@
      {
         "Email": "Marge.Simpson@email.com",
         "UserName": "Marge.Simpson@email.com",
+        "FirstName": "Marge",
+        "LastName": "Simpson",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsTeacher",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -27,6 +36,9 @@
 
         "Email": "Apu.Nahasapeemapetilon@email.com",
         "UserName": "Apu.Nahasapeemapetilon@email.com",
+        "FirstName": "Apu",
+        "LastName": "Nahasapeemapetilon",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsTeacher",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -35,6 +47,9 @@
      {
         "Email": "Chief.Clancy.Wiggum@email.com",
         "UserName": "Chief.Clancy.Wiggum@email.com",
+        "FirstName": "Chief Clancy",
+        "LastName": "Wiggum",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsTeacher",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -43,6 +58,9 @@
      {
         "Email": "Edna.Krabappel@email.com",
         "UserName": "Edna.Krabappel@email.com",
+        "FirstName": "Edna",
+        "LastName": "Krabappel",
+        "Address": "XXX Evergreen Terrace",
         "UserType": "IsTeacher",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",

@@ -2,6 +2,9 @@
     {
         "Email": "admin@hotmail.com",
         "UserName": "admin@hotmail.com",
+        "FirstName": "Admin",
+        "LastName": "Admin",
+        "Address": "Admin",
         "UserType": "IsAdmin",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -10,6 +13,9 @@
     {
         "Email": "headmaster@hotmail.com",
         "UserName": "headmaster@hotmail.com",
+        "FirstName": "Headmaster",
+        "LastName": "Headmaster",
+        "Address": "Headmaster",
         "UserType": "IsHeadmaster",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -18,6 +24,9 @@
     {
         "Email": "teacher@hotmail.com",
         "UserName": "teacher@hotmail.com",
+        "FirstName": "Teacher",
+        "LastName": "Teacher",
+        "Address": "Teacher",
         "UserType": "IsTeacher",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -26,6 +35,9 @@
     {
         "Email": "student@hotmail.com",
         "UserName": "student@hotmail.com",
+        "FirstName": "Student",
+        "LastName": "Student",
+        "Address": "Student",
         "UserType": "IsStudent",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
@@ -34,6 +46,9 @@
     {
         "Email": "user@hotmail.com",
         "UserName": "user@hotmail.com",
+        "FirstName": "User",
+        "LastName": "User",
+        "Address": "User",
         "UserType": "IsUser",
         "EmailConfirmed": true,
         "PhoneNumber": "0X0XXXX999",
