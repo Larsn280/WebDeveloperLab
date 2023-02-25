@@ -22,6 +22,7 @@ function Navbar() {
             <NavLink to="/">Start sida</NavLink>
             <NavLink to="/list">Aktuella Kurser</NavLink>
             <NavLink to="employeeList">Anställda</NavLink>
+            <NavLink to="studentList">Studenter</NavLink>
             <NavLink onClick={logOut} to="/login">
               Logga ut som Admin
             </NavLink>
@@ -31,6 +32,7 @@ function Navbar() {
           <li>
             <NavLink to="/">Start sida</NavLink>
             <NavLink to="/list">Aktuella Kurser</NavLink>
+            <NavLink to="studentList">Studenter</NavLink>
             <NavLink onClick={logOut} to="/login">
               Logga ut som Rektor
             </NavLink>
