@@ -21,6 +21,7 @@ function Navbar() {
           <li>
             <NavLink to="/">Start sida</NavLink>
             <NavLink to="/list">Aktuella Kurser</NavLink>
+            <NavLink to="employeeList">Anställda</NavLink>
             <NavLink onClick={logOut} to="/login">
               Logga ut som Admin
             </NavLink>
