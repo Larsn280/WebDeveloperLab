@@ -33,7 +33,8 @@ namespace LNSchool_API.Repositories
                         UserName = employed.UserName,
                         Address = employed.Address,
                         PhoneNumber = employed.PhoneNumber,
-                        Email = employed.Email
+                        Email = employed.Email,
+                        AreasOfExpertise = employed.AreasOfExpertise
                     };
 
                     allEmployees.Add(employee);

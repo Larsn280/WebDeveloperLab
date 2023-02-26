@@ -70,6 +70,7 @@ function EmployeeList() {
             <th>Adress</th>
             <th>Telefon</th>
             <th>Email</th>
+            <th>Kunskapsområde</th>
             <th></th>
           </tr>
         </thead>

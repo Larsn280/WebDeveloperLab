@@ -24,6 +24,7 @@ function EmployeeItem({ employee, handleDeleteEmployee }) {
       <td>{employee.address}</td>
       <td>{employee.phoneNumber}</td>
       <td>{employee.email}</td>
+      <td>{employee.areasOfExpertise}</td>
       <td>
         <span onClick={onDeleteClickHandler}>
           <h4 className="delete">Delete</h4>
