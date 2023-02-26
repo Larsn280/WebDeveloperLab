@@ -26,13 +26,13 @@ namespace LNSchool_API.Repositories
 
                     employee = new EmployeeViewModel
                     {
+                        EmployeeId = employed.Id,
                         FirstName = employed.FirstName,
                         LastName = employed.LastName,
                         UserName = employed.UserName,
                         Address = employed.Address,
                         PhoneNumber = employed.PhoneNumber,
                         Email = employed.Email
-
                     };
 
                     allEmployees.Add(employee);

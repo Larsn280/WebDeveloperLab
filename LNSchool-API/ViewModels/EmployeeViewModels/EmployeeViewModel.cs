@@ -3,6 +3,7 @@ namespace LNSchool_API.ViewModels.EmployeeViewModels
 {
     public class EmployeeViewModel
     {
+        public string? EmployeeId { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Address { get; set; }

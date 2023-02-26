@@ -2,6 +2,7 @@ namespace LNSchool_API.ViewModels.StudentViewModels
 {
     public class StudentViewModel
     {
+        public string? StudentId { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Address { get; set; }

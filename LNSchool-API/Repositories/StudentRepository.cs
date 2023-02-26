@@ -26,6 +26,7 @@ namespace LNSchool_API.Repositories
 
                     student = new StudentViewModel
                     {
+                        StudentId = studeing.Id,
                         FirstName = studeing.FirstName,
                         LastName = studeing.LastName,
                         UserName = studeing.UserName,

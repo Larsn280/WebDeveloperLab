@@ -90,7 +90,7 @@ function StudentList() {
             .map((student) => (
               <StudentItem
                 student={student}
-                // key={employee.id}
+                key={student.studentId}
                 // handleDeleteEmployee={deleteEmployee}
               />
             ))}
