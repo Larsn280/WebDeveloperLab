@@ -3,6 +3,7 @@ function Home() {
     <>
       <h1 className="page-title">Välkommen till LNSchool</h1>
       <div className="instructions">
+        <img src="images/Barney_Gumble.webp" alt="Empty"></img>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
           aliquam quae, aut eius nostrum, officia distinctio harum quos incidunt
