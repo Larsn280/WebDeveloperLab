@@ -8,7 +8,7 @@ function StudentItem({ student, handleDeleteStudent }) {
   };
 
   const onDeleteClickHandler = () => {
-    handleDeleteStudent(student.id);
+    handleDeleteStudent(student.studentId);
   };
 
   return (

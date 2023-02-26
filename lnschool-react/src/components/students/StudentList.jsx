@@ -91,7 +91,7 @@ function StudentList() {
               <StudentItem
                 student={student}
                 key={student.studentId}
-                // handleDeleteEmployee={deleteEmployee}
+                handleDeleteStudent={deleteStudent}
               />
             ))}
         </tbody>

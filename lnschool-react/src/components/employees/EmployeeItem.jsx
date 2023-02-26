@@ -8,7 +8,7 @@ function EmployeeItem({ employee, handleDeleteEmployee }) {
   };
 
   const onDeleteClickHandler = () => {
-    handleDeleteEmployee(employee.id);
+    handleDeleteEmployee(employee.employeeId);
   };
 
   return (

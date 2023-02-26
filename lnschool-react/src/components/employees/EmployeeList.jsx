@@ -30,7 +30,7 @@ function EmployeeList() {
   };
 
   const deleteEmployee = async (id) => {
-    console.log(`Tar bort kursen med id ${id}`);
+    console.log(`Tar bort anställd med id ${id}`);
     const url = `${process.env.REACT_APP_BASEURL}/employees/${id}`;
     const response = await fetch(url, {
       method: "DELETE",
@@ -91,7 +91,7 @@ function EmployeeList() {
               <EmployeeItem
                 employee={employee}
                 key={employee.employeeId}
-                // handleDeleteEmployee={deleteEmployee}
+                handleDeleteEmployee={deleteEmployee}
               />
             ))}
         </tbody>

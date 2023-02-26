@@ -24,5 +24,20 @@ namespace LNSchool_API.Controllers
         {
             return Ok(await _employeeRepo.ListAllEmployeesAsync());
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteEmployee(string id)
+        {
+        try
+        {
+            await _employeeRepo.DeleteEmployeeAsync(id);
+
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
+        }
     }
 }

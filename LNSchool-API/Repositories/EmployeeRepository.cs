@@ -14,6 +14,7 @@ namespace LNSchool_API.Repositories
             _userManager = userManager;
         }
 
+
         public async Task<List<EmployeeViewModel>> ListAllEmployeesAsync()
         {
             List<ApplicationUser> allUsers = await _userManager.Users.ToListAsync();
@@ -40,6 +41,21 @@ namespace LNSchool_API.Repositories
             }
 
             return allEmployees;
+        }
+        public async Task DeleteEmployeeAsync(string id) 
+        {
+            try {
+                var response = await _userManager.FindByIdAsync(id); 
+
+                if (response is null)
+                {
+                    throw new Exception($"We could not find a employee with id: {id}");
+                }
+                await _userManager.DeleteAsync(response);
+
+            } catch {
+                throw new Exception($"We could not delete employee with id: {id}");
+            }
         }
     }
 }

@@ -5,5 +5,6 @@ namespace LNSchool_API.Interfaces
     public interface IStudentRepository
     {
         public Task<List<StudentViewModel>> ListAllStudentsAsync();
+        public Task DeleteStudentAsync(string id);
     }
 }
