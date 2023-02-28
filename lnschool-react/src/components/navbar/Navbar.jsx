@@ -4,11 +4,11 @@ import useAuth from "../hooks/useAuth";
 import "./Navbar.css";
 
 function Navbar() {
-  const { auth } = useAuth();
+  const { auth, setAuth} = useAuth();
 
   const logOut = () => {
     localStorage.clear();
-    auth.clear();
+    setAuth({});
   };
 
   return (
