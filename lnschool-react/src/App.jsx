@@ -11,6 +11,7 @@ import CourseList from "./components/courses/CourseList";
 import AddCourse from "./components/courses/AddCourse";
 import EditCourse from "./components/courses/EditCourse";
 import EmployeeList from "./components/employees/EmployeeList";
+import AddEmployee from "./components/employees/AddEmployee";
 import StudentList from "./components/students/StudentList";
 import Registrate from "./components/registration/Registrate";
 import RequireAuth from "./components/authentication/RequireAuth";
@@ -31,6 +32,7 @@ function App() {
         <Route element={<RequireAuth />}>
           <Route path="/list" element={<CourseList />} />
           <Route path="/employeeList" element={<EmployeeList />} />
+          <Route path="/addEmployee" element={<AddEmployee />} />
           <Route path="/studentList" element={<StudentList />} />
           <Route path="/addCourse" element={<AddCourse />} />
           <Route path="/editCourse/:id" element={<EditCourse />} />

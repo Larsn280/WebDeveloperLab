@@ -4,7 +4,7 @@ import useAuth from "../hooks/useAuth";
 import "./Navbar.css";
 
 function Navbar() {
-  const { auth, setAuth} = useAuth();
+  const { auth, setAuth } = useAuth();
 
   const logOut = () => {
     localStorage.clear();
@@ -27,6 +27,7 @@ function Navbar() {
               Logga ut som Admin
             </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
+            <NavLink to="addEmployee">Lägg till anställd</NavLink>
           </li>
         ) : auth?.userType === "IsHeadmaster" ? (
           <li>

@@ -24,7 +24,7 @@ namespace LNSchool_API.Controllers
             return Ok(await _employeeRepo.ListAllEmployeesAsync());
         }
 
-        [HttpPost("addEmployee")]
+        [HttpPost()]
         public async Task<ActionResult> AddEmployee(PostEmployeeViewModel employee) 
         {
             return Ok(await _employeeRepo.AddEmployeeAsync(employee));
