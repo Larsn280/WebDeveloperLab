@@ -68,6 +68,34 @@ namespace LNSchool_API.Repositories
         return null!;
         }
 
+        public async Task<PostEmployeeViewModel> EditEmployeeAsync(string employeeId, PostEmployeeViewModel employee)
+        {
+        var user = await _userManager.FindByIdAsync(employeeId);
+
+        if(user == null)
+        {
+        return null;
+        }
+
+        user.FirstName = employee.FirstName;
+        user.LastName = employee.LastName;
+        user.UserName = employee.UserName;
+        user.Address = employee.Address;
+        user.PhoneNumber = employee.PhoneNumber;
+        user.Email = employee.Email;
+        user.AreasOfExpertise = employee.AreasOfExpertise;
+        user.UserType = employee.UserType; //assuming you have a UserType property in your ApplicationUser class
+
+        var result = await _userManager.UpdateAsync(user);
+
+        if(result.Succeeded)
+        {
+        return employee;
+        }
+
+        return null!;
+        }
+
         public async Task DeleteEmployeeAsync(string id) 
         {
             try {
