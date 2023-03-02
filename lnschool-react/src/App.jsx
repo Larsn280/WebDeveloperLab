@@ -13,6 +13,7 @@ import EditCourse from "./components/courses/EditCourse";
 import EmployeeList from "./components/employees/EmployeeList";
 import AddEmployee from "./components/employees/AddEmployee";
 import StudentList from "./components/students/StudentList";
+import AddStudent from "./components/students/AddStudent";
 import Registrate from "./components/registration/Registrate";
 import RequireAuth from "./components/authentication/RequireAuth";
 import { Routes, Route } from "react-router-dom";
@@ -34,6 +35,7 @@ function App() {
           <Route path="/employeeList" element={<EmployeeList />} />
           <Route path="/addEmployee" element={<AddEmployee />} />
           <Route path="/studentList" element={<StudentList />} />
+          <Route path="/addStudent" element={<AddStudent />} />
           <Route path="/addCourse" element={<AddCourse />} />
           <Route path="/editCourse/:id" element={<EditCourse />} />
         </Route>

@@ -24,7 +24,7 @@ namespace LNSchool_API.Controllers
             return Ok(await _studentRepo.ListAllStudentsAsync());
         }
 
-        [HttpPost("addStudent")]
+        [HttpPost()]
         public async Task<ActionResult> AddStudent(PostStudentViewModel student) 
         {
             return Ok(await _studentRepo.AddStudentAsync(student));

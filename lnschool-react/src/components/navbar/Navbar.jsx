@@ -28,6 +28,7 @@ function Navbar() {
             </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
             <NavLink to="addEmployee">Lägg till anställd</NavLink>
+            <NavLink to="addStudent">Lägg till elev</NavLink>
           </li>
         ) : auth?.userType === "IsHeadmaster" ? (
           <li>
