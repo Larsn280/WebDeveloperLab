@@ -43,6 +43,31 @@ namespace LNSchool_API.Repositories
 
             return allEmployees;
         }
+
+        public async Task<PostEmployeeViewModel> AddEmployeeAsync(PostEmployeeViewModel employee)
+        {
+        var user = new ApplicationUser
+        {
+            UserName = employee.UserName,
+            FirstName = employee.FirstName,
+            LastName = employee.LastName,
+            Address = employee.Address,
+            PhoneNumber = employee.PhoneNumber,
+            Email = employee.Email,
+            AreasOfExpertise = employee.AreasOfExpertise,
+            UserType = employee.UserType //assuming you have a UserType property in your ApplicationUser class
+        };
+
+        var result = await _userManager.CreateAsync(user, "1");
+
+        if(result.Succeeded)
+        {
+            return employee;
+        }
+
+        return null!;
+        }
+
         public async Task DeleteEmployeeAsync(string id) 
         {
             try {
