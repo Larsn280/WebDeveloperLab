@@ -42,6 +42,56 @@ namespace LNSchool_API.Repositories
             return allStudents;
         }
 
+        public async Task<PostStudentViewModel> AddStudentAsync(PostStudentViewModel student)
+        {
+        var user = new ApplicationUser
+        {
+            UserName = student.UserName,
+            FirstName = student.FirstName,
+            LastName = student.LastName,
+            Address = student.Address,
+            PhoneNumber = student.PhoneNumber,
+            Email = student.Email,
+            UserType = student.UserType
+        };
+
+        var result = await _userManager.CreateAsync(user, "1");
+
+        if(result.Succeeded)
+        {
+            return student;
+        }
+
+        return null!;
+        }
+
+        public async Task<PostStudentViewModel> EditStudentAsync(string studentId, PostStudentViewModel student)
+        {
+        var user = await _userManager.FindByIdAsync(studentId);
+
+        if(user == null)
+        {
+        return null!;
+        }
+
+        user.FirstName = student.FirstName;
+        user.LastName = student.LastName;
+        user.UserName = student.UserName;
+        user.Address = student.Address;
+        user.PhoneNumber = student.PhoneNumber;
+        user.Email = student.Email;
+        user.UserType = student.UserType;
+
+        var result = await _userManager.UpdateAsync(user);
+
+        if(result.Succeeded)
+        {
+        return student;
+        }
+
+        return null!;
+        }
+
         public async Task DeleteStudentAsync(string id) 
         {
             try {

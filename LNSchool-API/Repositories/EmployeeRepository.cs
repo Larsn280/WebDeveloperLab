@@ -55,7 +55,7 @@ namespace LNSchool_API.Repositories
             PhoneNumber = employee.PhoneNumber,
             Email = employee.Email,
             AreasOfExpertise = employee.AreasOfExpertise,
-            UserType = employee.UserType //assuming you have a UserType property in your ApplicationUser class
+            UserType = employee.UserType
         };
 
         var result = await _userManager.CreateAsync(user, "1");
@@ -74,7 +74,7 @@ namespace LNSchool_API.Repositories
 
         if(user == null)
         {
-        return null;
+        return null!;
         }
 
         user.FirstName = employee.FirstName;
@@ -84,7 +84,7 @@ namespace LNSchool_API.Repositories
         user.PhoneNumber = employee.PhoneNumber;
         user.Email = employee.Email;
         user.AreasOfExpertise = employee.AreasOfExpertise;
-        user.UserType = employee.UserType; //assuming you have a UserType property in your ApplicationUser class
+        user.UserType = employee.UserType;
 
         var result = await _userManager.UpdateAsync(user);
 
