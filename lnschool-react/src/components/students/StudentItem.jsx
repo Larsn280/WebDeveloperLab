@@ -4,7 +4,7 @@ function StudentItem({ student, handleDeleteStudent }) {
   const navigate = useNavigate();
 
   const onEditClickHandler = () => {
-    navigate(`/editStudent/${student.id}`);
+    navigate(`/editStudent/${student.studentId}`);
   };
 
   const onDeleteClickHandler = () => {

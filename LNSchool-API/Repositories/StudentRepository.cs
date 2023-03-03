@@ -42,6 +42,27 @@ namespace LNSchool_API.Repositories
             return allStudents;
         }
 
+        public async Task<StudentViewModel?> GetStudentByIdAsync(string id)
+        {
+            var selectedStudent = await _userManager.FindByIdAsync(id);
+
+            StudentViewModel student = new StudentViewModel();
+
+            if(selectedStudent != null) {
+
+                student.StudentId = selectedStudent.Id;
+                student.UserName = selectedStudent.UserName;
+                student.FirstName = selectedStudent.FirstName;
+                student.LastName = selectedStudent.LastName;
+                student.Address = selectedStudent.Address;
+                student.PhoneNumber = selectedStudent.PhoneNumber;
+                student.Email = selectedStudent.Email;
+
+                return student;
+            }
+            return null!;
+        }
+
         public async Task<PostStudentViewModel> AddStudentAsync(PostStudentViewModel student)
         {
         var user = new ApplicationUser

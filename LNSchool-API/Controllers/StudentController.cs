@@ -24,6 +24,16 @@ namespace LNSchool_API.Controllers
             return Ok(await _studentRepo.ListAllStudentsAsync());
         }
 
+        [HttpGet("{id}")]    
+        public async Task<ActionResult<StudentViewModel>> GetStudentById(string id)
+        {
+            var response = await _studentRepo.GetStudentByIdAsync(id);
+
+            if (response is null)
+                return NotFound($"Vi kunde inte hitta någon anställd med id: {id}");
+            return Ok(response);
+        }
+
         [HttpPost()]
         public async Task<ActionResult> AddStudent(PostStudentViewModel student) 
         {
