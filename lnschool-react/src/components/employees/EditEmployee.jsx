@@ -11,7 +11,6 @@ function EditEmployee() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [areasOfExpertise, setAreasOfExpertise] = useState("");
-  const [userType, setUserType] = useState("");
 
   useEffect(() => {
     fetchEmployee(params.id);
@@ -30,15 +29,14 @@ function EditEmployee() {
 
     const employee = await response.json();
     console.log(employee);
-    setEmployeeId();
-    setUserName();
-    setFirstName();
-    setLastName();
-    setAddress();
-    setPhoneNumber();
-    setEmail();
-    setAreasOfExpertise();
-    setUserType();
+    setEmployeeId(employee.employeeId);
+    setUserName(employee.userName);
+    setFirstName(employee.firstName);
+    setLastName(employee.lastName);
+    setAddress(employee.address);
+    setPhoneNumber(employee.phoneNumber);
+    setEmail(employee.email);
+    setAreasOfExpertise(employee.areasOfExpertise);
   };
 
   const onHandleEmployeeIdTextChanged = (e) => {
@@ -65,9 +63,6 @@ function EditEmployee() {
   const onHandleAreasOfExpertiseTextChanged = (e) => {
     setAreasOfExpertise(e.target.value);
   };
-  const onHandleUserTypeTextChanged = (e) => {
-    setUserType(e.target.value);
-  };
 
   const handleSaveEmployee = (e) => {
     e.preventDefault();
@@ -80,7 +75,6 @@ function EditEmployee() {
       phoneNumber,
       email,
       areasOfExpertise,
-      userType,
     };
 
     console.log(employee);
@@ -134,51 +128,61 @@ function EditEmployee() {
             <div className="form-control">
               <label htmlFor="firstName">Förnamn</label>
               <input
-                onChange={onHandleCourseTitleTextChanged}
-                value={courseTitle}
+                onChange={onHandleFirstNameTextChanged}
+                value={firstName}
                 type="text"
-                id="courseTitle"
-                name="courseTitle"
+                id="firstName"
+                name="firstName"
               />
             </div>
             <div className="form-control">
-              <label htmlFor="courseLength">Längd</label>
+              <label htmlFor="lastName">Efternamn</label>
               <input
-                onChange={onHandleCourseLengthTextChanged}
-                value={courseLength}
+                onChange={onHandleLastNameTextChanged}
+                value={lastName}
                 type="text"
-                id="courseLength"
-                name="courseLength"
+                id="lastName"
+                name="lastName"
               />
             </div>
             <div className="form-control">
-              <label htmlFor="category">Kategori</label>
+              <label htmlFor="address">Adress</label>
               <input
-                onChange={onHandleCategoryTextChanged}
-                value={category}
+                onChange={onHandleAddressTextChanged}
+                value={address}
                 type="text"
-                id="category"
-                name="category"
+                id="address"
+                name="address"
               />
             </div>
             <div className="form-control">
-              <label htmlFor="description">Beskrivning</label>
+              <label htmlFor="phoneNumber">Tel</label>
               <input
-                onChange={onHandleDescriptionTextChanged}
-                value={description}
+                onChange={onHandlePhoneNumberTextChanged}
+                value={phoneNumber}
                 ype="text"
-                id="description"
-                name="description"
+                id="phoneNumber"
+                name="phoneNumber"
               />
             </div>
             <div className="form-control">
-              <label htmlFor="details">Detaljer</label>
+              <label htmlFor="email">Email</label>
               <input
-                onChange={onHandleDetailsTextChanged}
-                value={details}
+                onChange={onHandleEmailTextChanged}
+                value={email}
                 type="text"
-                id="details"
-                name="details"
+                id="email"
+                name="email"
+              />
+            </div>
+            <div className="form-control">
+              <label htmlFor="areasOfExpertise">Kompetensområden</label>
+              <input
+                onChange={onHandleAreasOfExpertiseTextChanged}
+                value={areasOfExpertise}
+                type="text"
+                id="areasOfExpertise"
+                name="areasOfExpertise"
               />
             </div>
             <div className="buttons">

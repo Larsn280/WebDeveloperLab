@@ -80,7 +80,6 @@ namespace LNSchool_API.Repositories
         user.Address = student.Address;
         user.PhoneNumber = student.PhoneNumber;
         user.Email = student.Email;
-        user.UserType = student.UserType;
 
         var result = await _userManager.UpdateAsync(user);
 

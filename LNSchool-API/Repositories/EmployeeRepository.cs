@@ -44,6 +44,28 @@ namespace LNSchool_API.Repositories
             return allEmployees;
         }
 
+        public async Task<EmployeeViewModel?> GetEmployeeByIdAsync(string id)
+        {
+            var selectedEmployee = await _userManager.FindByIdAsync(id);
+
+            EmployeeViewModel employee = new EmployeeViewModel();
+
+            if(selectedEmployee != null) {
+
+                employee.EmployeeId = selectedEmployee.Id;
+                employee.UserName = selectedEmployee.UserName;
+                employee.FirstName = selectedEmployee.FirstName;
+                employee.LastName = selectedEmployee.LastName;
+                employee.Address = selectedEmployee.Address;
+                employee.PhoneNumber = selectedEmployee.PhoneNumber;
+                employee.Email = selectedEmployee.Email;
+                employee.AreasOfExpertise = selectedEmployee.AreasOfExpertise;
+
+                return employee;
+            }
+            return null!;
+        }
+
         public async Task<PostEmployeeViewModel> AddEmployeeAsync(PostEmployeeViewModel employee)
         {
         var user = new ApplicationUser
@@ -84,7 +106,6 @@ namespace LNSchool_API.Repositories
         user.PhoneNumber = employee.PhoneNumber;
         user.Email = employee.Email;
         user.AreasOfExpertise = employee.AreasOfExpertise;
-        user.UserType = employee.UserType;
 
         var result = await _userManager.UpdateAsync(user);
 

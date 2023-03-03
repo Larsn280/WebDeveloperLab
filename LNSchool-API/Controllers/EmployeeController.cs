@@ -24,6 +24,16 @@ namespace LNSchool_API.Controllers
             return Ok(await _employeeRepo.ListAllEmployeesAsync());
         }
 
+        [HttpGet("{id}")]    
+        public async Task<ActionResult<EmployeeViewModel>> GetEmployeeById(string id)
+        {
+            var response = await _employeeRepo.GetEmployeeByIdAsync(id);
+
+            if (response is null)
+                return NotFound($"Vi kunde inte hitta någon anställd med id: {id}");
+            return Ok(response);
+        }
+
         [HttpPost()]
         public async Task<ActionResult> AddEmployee(PostEmployeeViewModel employee) 
         {

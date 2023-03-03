@@ -11,6 +11,7 @@ import CourseList from "./components/courses/CourseList";
 import AddCourse from "./components/courses/AddCourse";
 import EditCourse from "./components/courses/EditCourse";
 import EmployeeList from "./components/employees/EmployeeList";
+import EditEmployee from "./components/employees/EditEmployee";
 import AddEmployee from "./components/employees/AddEmployee";
 import StudentList from "./components/students/StudentList";
 import AddStudent from "./components/students/AddStudent";
@@ -34,6 +35,7 @@ function App() {
           <Route path="/list" element={<CourseList />} />
           <Route path="/employeeList" element={<EmployeeList />} />
           <Route path="/addEmployee" element={<AddEmployee />} />
+          <Route path="/editEmployee/:id" element={<EditEmployee />} />
           <Route path="/studentList" element={<StudentList />} />
           <Route path="/addStudent" element={<AddStudent />} />
           <Route path="/addCourse" element={<AddCourse />} />

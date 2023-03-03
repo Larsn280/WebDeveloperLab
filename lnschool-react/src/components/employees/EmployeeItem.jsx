@@ -4,7 +4,7 @@ function EmployeeItem({ employee, handleDeleteEmployee }) {
   const navigate = useNavigate();
 
   const onEditClickHandler = () => {
-    navigate(`/editEmployee/${employee.id}`);
+    navigate(`/editEmployee/${employee.employeeId}`);
   };
 
   const onDeleteClickHandler = () => {
