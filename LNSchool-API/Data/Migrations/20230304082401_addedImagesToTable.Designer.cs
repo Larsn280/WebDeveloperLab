@@ -3,16 +3,19 @@ using System;
 using LNSchool_API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DataMigrations
+namespace LNSchoolAPI.Data.Migrations
 {
     [DbContext(typeof(LNSchoolContext))]
-    partial class LNSchoolContextModelSnapshot : ModelSnapshot
+    [Migration("20230304082401_addedImagesToTable")]
+    partial class addedImagesToTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.2");

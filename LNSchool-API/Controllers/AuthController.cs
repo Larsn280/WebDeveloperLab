@@ -90,6 +90,7 @@ namespace LNSchool_API.Controllers
       var userData = new UserViewModel
       {
         UserName = user.UserName,
+        ProfileImg = user.ProfileImg,
         UserType = user.UserType,
         Expires = DateTime.Now.AddDays(7),
         Token = await CreateJwtToken(user)

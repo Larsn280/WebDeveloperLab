@@ -8,6 +8,7 @@ namespace LNSchool_API.Models
         public string? LastName {get; set;}
         public string? Address { get; set; }
         public string? AreasOfExpertise { get; set; }
+        public string? ProfileImg { get; set; }
         public string? UserType {get; set;}
     }
 }

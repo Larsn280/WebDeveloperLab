@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import NavbarDropdown from "../dropdowns/NavbarDropdown";
 
 import "./Navbar.css";
 
@@ -29,6 +30,7 @@ function Navbar() {
             <NavLink to="addCourse">Lägg till kurs</NavLink>
             <NavLink to="addEmployee">Lägg till anställd</NavLink>
             <NavLink to="addStudent">Lägg till elev</NavLink>
+            <NavbarDropdown />
           </li>
         ) : auth?.userType === "IsHeadmaster" ? (
           <li>
@@ -39,6 +41,7 @@ function Navbar() {
               Logga ut som Rektor
             </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
+            <NavbarDropdown />
           </li>
         ) : auth?.userType === "IsTeacher" ? (
           <li>

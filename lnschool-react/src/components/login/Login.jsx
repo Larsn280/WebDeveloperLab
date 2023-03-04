@@ -49,9 +49,10 @@ function Login() {
       console.log(JSON.stringify(result));
 
       const accessToken = result.token;
+      const profileImage = result.profileImg;
       const userType = result.userType;
 
-      setAuth({ userName, password, userType, accessToken });
+      setAuth({ userName, password, profileImage, userType, accessToken });
       setUserName("");
       setPassword("");
       navigate(from, { replace: true });
