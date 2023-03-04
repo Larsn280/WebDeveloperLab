@@ -54,11 +54,22 @@
 h3{
     width: 100%;
     text-align: center;
-    /* font-size: 18px; */
-    padding: 20px 0;
+    padding: 0px 0;
     font-weight: 500;
     font-size: 14px;
     color: var(--primary-text-color);
     line-height: 1.2rem;
 }
+
+.dropdownItem a{
+    height: 40px;
+}
+
+.dropdown-menu div li:hover h3{
+    color: rgb(212, 33, 9);
+    cursor: pointer;
+}
+
+
+
 

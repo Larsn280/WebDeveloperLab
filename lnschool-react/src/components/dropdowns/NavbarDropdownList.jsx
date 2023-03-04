@@ -39,7 +39,11 @@ function NavbarDropdownList() {
           setOpen(!open);
         }}
       >
-        <img src={auth.profileImage} alt="profileImage" />
+        {auth?.profileImage ? (
+          <img src={auth.profileImage} alt="profileImage" />
+        ) : (
+          <img src="images/user.png" alt="profileImage" />
+        )}
       </div>
 
       <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
