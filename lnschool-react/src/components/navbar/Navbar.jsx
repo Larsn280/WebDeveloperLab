@@ -16,12 +16,6 @@ function Navbar() {
         {auth?.userType === "IsAdmin" ? (
           <li>
             <NavLink to="/">Start sida</NavLink>
-            <NavLink to="/list">Aktuella Kurser</NavLink>
-            <NavLink to="employeeList">Anställda</NavLink>
-            <NavLink to="studentList">Studenter</NavLink>
-            <NavLink to="addCourse">Lägg till kurs</NavLink>
-            <NavLink to="addEmployee">Lägg till anställd</NavLink>
-            <NavLink to="addStudent">Lägg till elev</NavLink>
             <NavbarDropdownList />
           </li>
         ) : auth?.userType === "IsHeadmaster" ? (
@@ -32,20 +26,15 @@ function Navbar() {
         ) : auth?.userType === "IsTeacher" ? (
           <li>
             <NavLink to="/">Start sida</NavLink>
-            <NavLink to="/list">Aktuella Kurser</NavLink>
-            <NavLink to="addCourse">Lägg till kurs</NavLink>
           </li>
         ) : auth?.userType === "IsStudent" ? (
           <li>
             <NavLink to="/">Start sida</NavLink>
-            <NavLink to="/list">Aktuella Kurser</NavLink>
-            <NavLink to="addCourse">Lägg till kurs</NavLink>
           </li>
         ) : (
           <li>
             <>
               <NavLink to="/">Start sida</NavLink>
-              <NavLink to="/list">Aktuella Kurser</NavLink>
               <NavLink to="/login">Logga in</NavLink>
             </>
           </li>

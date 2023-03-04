@@ -51,6 +51,11 @@ function NavbarDropdownList() {
         <ul>
           {auth?.userType === "IsAdmin" ? (
             <div>
+              <NavbarDropdownItem navLink="employeeList" text={"Anställda"} />
+              <NavbarDropdownItem
+                navLink="addEmployee"
+                text="Lägg till anställd"
+              />
               <NavbarDropdownItem navLink="studentList" text={"Studenter"} />
               <NavbarDropdownItem navLink="addStudent" text="Lägg till elev" />
               <NavbarDropdownItem navLink="list" text="Aktuella Kurser" />
@@ -63,7 +68,7 @@ function NavbarDropdownList() {
             </div>
           ) : auth?.userType === "IsHeadmaster" ? (
             <div>
-              <NavbarDropdownItem navLink="studentList" text={"Studenter"} />
+              <NavbarDropdownItem navLink="studentList" text="Studenter" />
               <NavbarDropdownItem navLink="addStudent" text="Lägg till elev" />
               <NavbarDropdownItem navLink="list" text="Aktuella Kurser" />
               <NavbarDropdownItem navLink="addCourse" text="Lägg till kurs" />
@@ -74,11 +79,17 @@ function NavbarDropdownList() {
               </li>
             </div>
           ) : auth?.userType === "IsTeacher" ? (
-            <li>
-              <NavLink onClick={logOut} to="/login">
-                <h3>Logga ut som Lärare</h3>
-              </NavLink>
-            </li>
+            <div>
+              <NavbarDropdownItem navLink="studentList" text={"Studenter"} />
+              <NavbarDropdownItem navLink="addStudent" text="Lägg till elev" />
+              <NavbarDropdownItem navLink="list" text="Aktuella Kurser" />
+              <NavbarDropdownItem navLink="addCourse" text="Lägg till kurs" />
+              <li>
+                <NavLink onClick={logOut} to="/login">
+                  <h3>Logga ut som Lärare</h3>
+                </NavLink>
+              </li>
+            </div>
           ) : auth?.userType === "IsStudent" ? (
             <li>
               <NavLink onClick={logOut} to="/login">
