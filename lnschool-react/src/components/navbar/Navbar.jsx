@@ -5,12 +5,7 @@ import NavbarDropdown from "../dropdowns/NavbarDropdown";
 import "./Navbar.css";
 
 function Navbar() {
-  const { auth, setAuth } = useAuth();
-
-  const logOut = () => {
-    localStorage.clear();
-    setAuth({});
-  };
+  const { auth } = useAuth();
 
   return (
     <nav id="navbar">
@@ -24,9 +19,6 @@ function Navbar() {
             <NavLink to="/list">Aktuella Kurser</NavLink>
             <NavLink to="employeeList">Anställda</NavLink>
             <NavLink to="studentList">Studenter</NavLink>
-            <NavLink onClick={logOut} to="/login">
-              Logga ut som Admin
-            </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
             <NavLink to="addEmployee">Lägg till anställd</NavLink>
             <NavLink to="addStudent">Lägg till elev</NavLink>
@@ -36,29 +28,18 @@ function Navbar() {
           <li>
             <NavLink to="/">Start sida</NavLink>
             <NavLink to="/list">Aktuella Kurser</NavLink>
-            <NavLink to="studentList">Studenter</NavLink>
-            <NavLink onClick={logOut} to="/login">
-              Logga ut som Rektor
-            </NavLink>
-            <NavLink to="addCourse">Lägg till kurs</NavLink>
             <NavbarDropdown />
           </li>
         ) : auth?.userType === "IsTeacher" ? (
           <li>
             <NavLink to="/">Start sida</NavLink>
             <NavLink to="/list">Aktuella Kurser</NavLink>
-            <NavLink onClick={logOut} to="/login">
-              Logga ut som Lärare
-            </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
           </li>
         ) : auth?.userType === "IsStudent" ? (
           <li>
             <NavLink to="/">Start sida</NavLink>
             <NavLink to="/list">Aktuella Kurser</NavLink>
-            <NavLink onClick={logOut} to="/login">
-              Logga ut som Student
-            </NavLink>
             <NavLink to="addCourse">Lägg till kurs</NavLink>
           </li>
         ) : (
