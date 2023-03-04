@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import NavbarDropdownItem from "./NavbarDropdownItem";
 
 import "./NavbarDropdown.css";
 
-function NavbarDropdown() {
+function NavbarDropdownList() {
   const { auth, setAuth } = useAuth();
   const [open, setOpen] = useState(false);
 
@@ -49,23 +50,29 @@ function NavbarDropdown() {
         </h3>
         <ul>
           {auth?.userType === "IsAdmin" ? (
-            <li>
-              <NavLink onClick={logOut} to="/login">
-                <h3>Logga ut som Admin</h3>
-              </NavLink>
-            </li>
+            <div>
+              <NavbarDropdownItem navLink="studentList" text={"Studenter"} />
+              <NavbarDropdownItem navLink="addStudent" text="Lägg till elev" />
+              <NavbarDropdownItem navLink="list" text="Aktuella Kurser" />
+              <NavbarDropdownItem navLink="addCourse" text="Lägg till kurs" />
+              <li>
+                <NavLink onClick={logOut} to="/login">
+                  <h3>Logga ut som Admin</h3>
+                </NavLink>
+              </li>
+            </div>
           ) : auth?.userType === "IsHeadmaster" ? (
-            <li>
-              <NavLink to="studentList">
-                <h3>Studenter</h3>
-              </NavLink>
-              <NavLink to="addCourse">
-                <h3>Lägg till kurs</h3>
-              </NavLink>
-              <NavLink onClick={logOut} to="/login">
-                <h3>Logga ut som Rektor</h3>
-              </NavLink>
-            </li>
+            <div>
+              <NavbarDropdownItem navLink="studentList" text={"Studenter"} />
+              <NavbarDropdownItem navLink="addStudent" text="Lägg till elev" />
+              <NavbarDropdownItem navLink="list" text="Aktuella Kurser" />
+              <NavbarDropdownItem navLink="addCourse" text="Lägg till kurs" />
+              <li>
+                <NavLink onClick={logOut} to="/login">
+                  <h3>Logga ut som Rektor</h3>
+                </NavLink>
+              </li>
+            </div>
           ) : auth?.userType === "IsTeacher" ? (
             <li>
               <NavLink onClick={logOut} to="/login">
@@ -99,4 +106,4 @@ function NavbarDropdown() {
   );
 }
 
-export default NavbarDropdown;
+export default NavbarDropdownList;
