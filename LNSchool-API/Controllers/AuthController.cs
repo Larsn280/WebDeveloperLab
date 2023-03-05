@@ -33,7 +33,8 @@ namespace LNSchool_API.Controllers
       var user = new ApplicationUser
       {
         Email = model.Email!.ToLower(),
-        UserName = model.Email.ToLower(), 
+        UserName = model.Email.ToLower(),
+        UserType = "IsUser",
       };
 
       var result = await _userManager.CreateAsync(user, model.Password!);
