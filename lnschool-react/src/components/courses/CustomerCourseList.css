@@ -1,8 +1,5 @@
 .customerCourseList-container{
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
 
   padding: 2rem;
   background-color: var(--table-background-color);
@@ -13,13 +10,9 @@
 }
 
 .customerCourseItem-container{
-  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-
-  max-width: 400px;
-
+  flex-direction: column;
   padding: 1rem;
   margin: 1.5rem;
 
