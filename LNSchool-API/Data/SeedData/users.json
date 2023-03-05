@@ -1,6 +1,6 @@
 [
     {
-        "Email": "admin@admin.com",
+        "Email": "admin@.com",
         "UserName": "admin@admin.com",
         "FirstName": "Admin",
         "LastName": "Admin",
@@ -13,7 +13,7 @@
         "PhoneNumberConfirmed": true
     },
     {
-        "Email": "headmaster@headmaster.com",
+        "Email": "headmaster@.com",
         "UserName": "headmaster@headmaster.com",
         "FirstName": "Headmaster",
         "LastName": "Headmaster",
@@ -26,7 +26,7 @@
         "PhoneNumberConfirmed": true
     },
     {
-        "Email": "teacher@teacher.com",
+        "Email": "teacher@.com",
         "UserName": "teacher@teacher.com",
         "FirstName": "Teacher",
         "LastName": "Teacher",
@@ -39,7 +39,7 @@
         "PhoneNumberConfirmed": true
     },
     {
-        "Email": "student@student.com",
+        "Email": "student@.com",
         "UserName": "student@student.com",
         "FirstName": "Student",
         "LastName": "Student",
@@ -52,7 +52,7 @@
         "PhoneNumberConfirmed": true
     },
     {
-        "Email": "user@user.com",
+        "Email": "user@.com",
         "UserName": "user@user.com",
         "FirstName": "User",
         "LastName": "User",
