@@ -1,11 +1,9 @@
 import CourseItem from "./CourseItem";
 import { useEffect, useState } from "react";
-import SearchBar from "../searchBar/SearchBar";
 
 function CourseList() {
   const [searchTerm, setSearchTerm] = useState("");
   const [courses, setCourses] = useState([]);
-  console.log(courses);
 
   useEffect(() => {
     loadCourses();

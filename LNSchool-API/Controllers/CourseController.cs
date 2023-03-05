@@ -18,7 +18,7 @@ namespace LNSchool_API.Controllers
         }
 
         [HttpGet("list")]
-        [Authorize()]
+        // [Authorize()]
         public async Task<ActionResult<List<CourseViewModel>>> ListCourses()
         {
             return Ok(await _courseRepo.ListAllCoursesAsync());
