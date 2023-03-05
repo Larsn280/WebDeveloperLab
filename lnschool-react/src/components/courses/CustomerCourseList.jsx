@@ -25,11 +25,14 @@ function CustomerCourseList() {
   };
 
   return (
-    <div className="customerCourseList-container">
-      {courses.map((course) => (
-        <CustomerCourseItem course={course} key={course.courseId} />
-      ))}
-    </div>
+    <>
+      <h1 className="page-title">Våra aktuella kurser på LNSchool!</h1>
+      <div className="customerCourseList-container">
+        {courses.map((course) => (
+          <CustomerCourseItem course={course} key={course.courseId} />
+        ))}
+      </div>
+    </>
   );
 }
 

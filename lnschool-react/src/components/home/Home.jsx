@@ -1,7 +1,7 @@
 function Home() {
   return (
     <>
-      <h1 className="page-title">Välkommen till LNSchool</h1>
+      <h1 className="page-title">Välkommen till LNSchool!</h1>
       <div className="instructions">
         <img src="images/Barney_Gumble.webp" alt="Empty"></img>
         <div>
