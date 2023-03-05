@@ -16,8 +16,14 @@
   padding: 1rem;
   margin: 1.5rem;
 
-  border: var(--border-color) solid 1px;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+  border: #888 solid 1px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.6);
+  background-color: var(--light-color);
+}
+
+.customerCourseItem-container:hover{
+  border: black solid 2px;
 }
 
 .customerCourseItem-image {
@@ -49,5 +55,55 @@
   display: flex;
   justify-content: center;
   margin: 0.5rem;
+}
+
+.courseDetails-container{
+    max-width: 800px;
+
+    padding: 1rem;
+    margin: auto;
+    border: #888 solid 1px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.6);
+    background-color: var(--light-color);
+}
+
+.mainInfo-text{
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.mainInfo-text h2{
+  padding: 1rem;
+}
+
+@media(max-width:900px) {
+  .mainInfo-text h2{
+    font-size: 16px;
+  }
+  .subInfo-text h3{
+    font-size: 14px;
+  }
+  .subInfo-text h4{
+    font-size: 14px;
+  }
+}
+
+@media(max-width:560px) {
+  .mainInfo-text h2{
+    font-size: 14px;
+  }
+  .subInfo-text h3{
+    font-size: 12px;
+  }
+  .subInfo-text h4{
+    font-size: 12px;
+  }
+}
+
+.subInfo-text h3{
+  padding-top:1rem;
 }
 

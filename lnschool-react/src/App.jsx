@@ -11,6 +11,7 @@ import CourseList from "./components/courses/CourseList";
 import AddCourse from "./components/courses/AddCourse";
 import EditCourse from "./components/courses/EditCourse";
 import CustomerCourseList from "./components/courses/CustomerCourseList";
+import CustomerCourseDetails from "./components/courses/CustomerCourseDetails";
 import EmployeeList from "./components/employees/EmployeeList";
 import EditEmployee from "./components/employees/EditEmployee";
 import AddEmployee from "./components/employees/AddEmployee";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registrate" element={<Registrate />} />
+        <Route path="/courseDetails/:id" element={<CustomerCourseDetails />} />
         <Route path="/customerList" element={<CustomerCourseList />} />
         {/* Protected Routes */}
         <Route element={<RequireAuth />}>

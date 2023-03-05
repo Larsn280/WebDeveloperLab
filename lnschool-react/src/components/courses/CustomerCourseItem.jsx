@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 function CustomerCourseItem({ course }) {
+  const navigate = useNavigate();
+
+  const onClickHandler = () => {
+    navigate(`/courseDetails/${course.courseId}`);
+  };
+
   return (
-    <div className="customerCourseItem-container">
+    <div className="customerCourseItem-container" onClick={onClickHandler}>
       <div className="customerCourseItem-image">
         <img src="images/user.png" alt="courseImage" />
       </div>

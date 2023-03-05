@@ -39,7 +39,7 @@ function NavbarDropdownList() {
           setOpen(!open);
         }}
       >
-        {auth?.profileImage ? (
+        {auth?.profileImage || auth?.profileImage != null ? (
           <img src={auth.profileImage} alt="profileImage" />
         ) : (
           <img src="images/user.png" alt="profileImage" />
