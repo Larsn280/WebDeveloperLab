@@ -5,7 +5,6 @@
   background-color: var(--table-background-color);
   color: var(--primary-text-color);
   border: var(--border-color) solid 1px;
-  opacity: 0.6;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -105,5 +104,11 @@
 
 .subInfo-text h3{
   padding-top:1rem;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 

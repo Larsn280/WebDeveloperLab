@@ -36,6 +36,12 @@ function CustomerCourseDetails() {
     console.log(course);
   };
 
+  const onClickHandler = () => {
+    console.log(
+      "Till funktion som skall lägga till inloggad användare till en lista med kunder"
+    );
+  };
+
   return (
     <>
       <h1 className="page-title">{courseTitle}</h1>
@@ -48,6 +54,11 @@ function CustomerCourseDetails() {
         <div className="subInfo-text">
           <h4>Beskrivning: {description}</h4>
           <h3>Detaljer: {details}</h3>
+        </div>
+        <div className="button-container">
+          <button onClick={onClickHandler} className="btn">
+            Köp kurs
+          </button>
         </div>
       </div>
     </>

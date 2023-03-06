@@ -5,6 +5,7 @@ import "./CustomerCourseList.css";
 
 function CustomerCourseList() {
   const [courses, setCourses] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   console.log(courses);
 
   useEffect(() => {
@@ -24,13 +25,36 @@ function CustomerCourseList() {
     }
   };
 
+  const onSearchTermChangeHandler = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <>
       <h1 className="page-title">Våra aktuella kurser på LNSchool!</h1>
+      <input
+        type="text"
+        value={searchTerm}
+        placeholder="Search..."
+        id="searchTerm"
+        name="seachTerm"
+        onChange={onSearchTermChangeHandler}
+      />
       <div className="customerCourseList-container">
-        {courses.map((course) => (
-          <CustomerCourseItem course={course} key={course.courseId} />
-        ))}
+        {courses
+          .filter((course) => {
+            if (searchTerm === "") {
+              return course;
+            }
+            if (
+              course.category.toLowerCase().includes(searchTerm.toLowerCase())
+            ) {
+              return course;
+            }
+          })
+          .map((course) => (
+            <CustomerCourseItem course={course} key={course.courseId} />
+          ))}
       </div>
     </>
   );

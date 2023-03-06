@@ -3,7 +3,19 @@ function Home() {
     <>
       <h1 className="page-title">Välkommen till LNSchool!</h1>
       <div className="instructions">
-        <img src="images/Barney_Gumble.webp" alt="Empty"></img>
+        <div className="homePageImg-container">
+          <div className="homePageImg">
+            <img
+              src="images/FiGPiN_760BartSimpsonTHESIMPSONSPIN.webp"
+              alt="Empty"
+            ></img>
+          </div>
+          <div className="homePageUserInfo">
+            Användare : admin@admin.com, headmaster@headmaster.com,
+            teacher@teacher.com, student@student.com, user@user.com Lösenord:
+            "1"
+          </div>
+        </div>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
           aliquam quae, aut eius nostrum, officia distinctio harum quos incidunt

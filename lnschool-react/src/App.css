@@ -155,3 +155,33 @@ textarea {
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
+.homePageImg-container{
+  display: flex;
+  max-height: 500px;
+  width: 100%;
+}
+
+.homePageUserInfo{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.homePageImg{
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+  width: 50%;
+}
+
+.homePageImg-container img{
+  max-height: 500px;
+  max-width: 500px;
+  object-fit: cover;
+}
+
